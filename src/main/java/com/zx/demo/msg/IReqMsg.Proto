@@ -1,0 +1,14 @@
+syntax = "proto2";
+package demo;
+
+option java_package = "com.zx.demo.msg";
+option java_outer_classname = "IRequestMsg";
+
+import "ReqPlayer.proto";
+
+message IReqMsg {
+
+	required int32 id = 1;
+	optional ReqPlayer reqPlayer = 2;
+	
+}
