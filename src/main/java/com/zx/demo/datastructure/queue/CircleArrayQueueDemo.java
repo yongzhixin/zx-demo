@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class CircleArrayQueueDemo {
 
     public static void main(String[] args) {
-        CircleArrayQueue queue = new CircleArrayQueue(3);
+        CircleArrayQueue<Integer> queue = new CircleArrayQueue<>(3);
         boolean loop = true;
         Scanner scanner = new Scanner(System.in);
         char type = ' ';
@@ -58,15 +58,18 @@ public class CircleArrayQueueDemo {
 
 }
 
-class CircleArrayQueue {
+/**
+ * 用数组模拟一个环形数组队列
+ */
+class CircleArrayQueue<T> {
     private int maxSize;// 最大size
     private int front;// 队列头
     private int reer;// 队列尾
-    private int[] arr;// 数据
+    private Object[] arr;// 数据
 
     public CircleArrayQueue(int maxSize) {
         this.maxSize = maxSize + 1;// 预留一个空间出来
-        arr = new int[this.maxSize];
+        arr = new Object[this.maxSize];
     }
 
     /**
@@ -92,13 +95,13 @@ class CircleArrayQueue {
      *
      * @param value
      */
-    public void addQueue(int value) {
+    public void addQueue(T value) {
         if (isFull()) {
             System.out.println("队列已满，无法入队");
             return;
         }
         arr[reer] = value;
-        reer = (reer + 1) % maxSize;//reer++;
+        reer = (reer + 1) % maxSize;// reer++;
     }
 
     /**
@@ -106,13 +109,13 @@ class CircleArrayQueue {
      *
      * @return
      */
-    public int getQueue() {
+    public T getQueue() {
         if (isEmpty()) {
             throw new RuntimeException("队列为空，无法出队");
         }
-        int value = arr[front];
+        Object value = arr[front];
         front = (front + 1) % maxSize;// front++
-        return value;
+        return (T) value;
     }
 
     /**
@@ -120,11 +123,11 @@ class CircleArrayQueue {
      *
      * @return
      */
-    public int peekHead() {
+    public T peekHead() {
         if (isEmpty()) {
             throw new RuntimeException("队列为空，没有数据");
         }
-        return arr[front];
+        return (T) arr[front];
     }
 
     /**
@@ -135,7 +138,7 @@ class CircleArrayQueue {
             throw new RuntimeException("队列为空，没有数据");
         }
         for (int i = front; i < front + size(); i++) {
-            System.out.printf("arr[%d] = %d\n", i % maxSize, arr[i % maxSize]);
+            System.out.printf("arr[%d] = %d\n", i % maxSize, (T) arr[i % maxSize]);
         }
     }
 
