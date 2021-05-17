@@ -8,7 +8,7 @@ public class CircleArrayQueueDemo {
         CircleArrayQueue<Integer> queue = new CircleArrayQueue<>(3);
         boolean loop = true;
         Scanner scanner = new Scanner(System.in);
-        char type = '  ';
+        char type = ' ';
         while (loop) {
             System.out.println("l:显示队列中的数据");
             System.out.println("a:添加数据");
