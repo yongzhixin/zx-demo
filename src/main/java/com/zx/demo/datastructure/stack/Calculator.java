@@ -41,7 +41,7 @@ public class Calculator {
                     if (oper.priority <= topOper.priority) {// 当前操作的优先级低，表示需要计算栈顶操作符优先级高的操作
                         num1 = numStack.pop();
                         num2 = numStack.pop();
-                        int result = Operator.k2v(operStack.pop()).cal(num1, num2);
+                        int result = (int) Operator.k2v(operStack.pop()).cal(num1, num2);
                         numStack.push(result);
                         operStack.push(charAt);
                         System.err.printf("num1: %d, num2: %d, oper: %s\n", num1, num2, topOper);
@@ -62,7 +62,7 @@ public class Calculator {
             num1 = numStack.pop();
             num2 = numStack.pop();
             Operator topOper = Operator.k2v(operStack.pop());
-            int result = topOper.cal(num1, num2);
+            int result = (int) topOper.cal(num1, num2);
             numStack.push(result);
             System.err.printf("num1: %d, num2: %d, oper: %s\n", num1, num2, topOper);
             numStack.list();
@@ -78,25 +78,25 @@ public class Calculator {
 enum Operator {
     PLUS('+', 0) {
         @Override
-        public int cal(int num1, int num2) {
+        public double cal(double num1, double num2) {
             return num1 + num2;
         }
     },
     REDUCE('-', 0) {
         @Override
-        public int cal(int num1, int num2) {
+        public double cal(double num1, double num2) {
             return num2 - num1;
         }
     },
     RIDE('*', 1) {
         @Override
-        public int cal(int num1, int num2) {
+        public double cal(double num1, double num2) {
             return num1 * num2;
         }
     },
     DIVIDE('/', 1) {
         @Override
-        public int cal(int num1, int num2) {
+        public double cal(double num1, double num2) {
             return num2 / num1;
         }
     };
@@ -110,7 +110,7 @@ enum Operator {
         this.priority = priority;
     }
 
-    public abstract int cal(int num1, int num2);
+    public abstract double cal(double num1, double num2);
 
     public static Operator k2v(char op) {
         for (Operator operator : Operator.values()) {
