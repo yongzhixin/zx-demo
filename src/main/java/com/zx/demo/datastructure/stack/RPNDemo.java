@@ -11,8 +11,8 @@ import java.util.Stack;
 public class RPNDemo {
 
     public static void main(String[] args) {
-        String expression = "50.5 + 250 * 6-32* 2.0-120";
-//        String expression = "1+((2+3)*4)-5";
+//        String expression = "50.5 + 250 * 6-32* 2.0-120";
+        String expression = "1+(( 2+3)* 4)-5";
         List<String> infixList = toInfixExpressionList(expression);
         System.out.printf("%s 的中缀表达式：%s\n", expression, infixList);
         List<String> suffixList = infix2SuffixExpression(infixList);
