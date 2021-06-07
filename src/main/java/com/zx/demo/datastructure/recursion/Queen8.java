@@ -34,7 +34,7 @@ public class Queen8 {
         for (int i = 0; i < max; i++) {
             array[n] = i;
             if (judge(n)) {// 可以放则去放下一行
-                System.err.printf("第 %d 个皇后放在 %d 列\n", n + 1, i + 1);
+//                System.err.printf("第 %d 个皇后放在 %d 列\n", n + 1, i + 1);
                 check(n + 1);
             }
         }
