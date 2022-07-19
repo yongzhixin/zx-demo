@@ -41,6 +41,7 @@ public class Queen8 {
     }
 
     /**
+     *
      * 第几个皇后
      *
      * @param n

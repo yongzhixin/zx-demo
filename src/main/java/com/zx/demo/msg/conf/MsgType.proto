@@ -1,0 +1,13 @@
+syntax = "proto2";
+package demo;
+
+option java_package = "com.zx.demo.msg";
+option java_outer_classname = "MessageType";
+
+enum MsgType {
+
+	CG_PLAYER_LOGIN = 1001;
+	GC_PLAYER_LOGIN = 1002;
+	CG_ACTIVITIES = 1003;
+	GC_ACTIVITIES = 1004;
+}

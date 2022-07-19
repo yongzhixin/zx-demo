@@ -12,16 +12,20 @@ public class Singleton {
     }
 
     private static class SingletonHolder {
+        static {
+            System.out.println("SingletonHolder loading 1 ...");
+        }
+
         private final static Singleton INSTANCE = new Singleton();
 
         static {
-            System.out.println("SingletonHolder loading...");
+            System.out.println("SingletonHolder loading 2 ...");
         }
     }
 
     public static Singleton getInstance() {
-        return null;// 验证静态内部类的加载时机：第一次使用时加载
-//        return SingletonHolder.INSTANCE;
+//        return null;// 验证静态内部类的加载时机：第一次使用时加载
+        return SingletonHolder.INSTANCE;
     }
 
     static {

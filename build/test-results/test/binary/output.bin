@@ -1,0 +1,97 @@
+null
+1
++sun.misc.Launcher$AppClassLoader@73d16e93
+Isun.misc.Launcher$ExtClassLoader@13fee20c class java.net.URLClassLoader
+null
++sun.misc.Launcher$AppClassLoader@73d16e93
+null
+
+	执行前...
+
+	real do something...
+
+	执行后...
+
+	-com.zx.demo.demode.proxy.StaticProxySubject
+
+执行前...
+
+前置通知...
+
+real do something...
+
+后置通知...
+
+执行后...
+
+com.sun.proxy.$Proxy5
+
+执行前...
+
+前置通知...
+
+real do something...
+
+后置通知...
+
+执行后...
+
+=com.zx.demo.demode.proxy.Subject$$EnhancerByCGLIB$$87b4e481
+Singleton loading...
+SingletonHolder loading 1 ...
+Singleton init...
+SingletonHolder loading 2 ...
+true
+ 普通用户，折扣为：1.0
+A原价为：5000.0，折后价为：5000.0，本次优惠：0.0
+最终支付：5000.0
+vip用户，折扣为：0.9
+E原价为：10000.0，折后价为：9000.0，本次优惠：1000.0
+最终支付：9000.0
+#super_vip用户，折扣为：0.8
+E原价为：10000.0，折后价为：8000.0，本次优惠：2000.0
+最终支付：8000.0
+"gold_vip用户，折扣为：0.6
+E原价为：10000.0，折后价为：6000.0，本次优惠：4000.0
+最终支付：6000.0
+"gold_vip用户，折扣为：0.6
+E原价为：10000.0，折后价为：6000.0，本次优惠：4000.0
+最终支付：6000.0
+"gold_vip用户，折扣为：0.6
+E原价为：10000.0，折后价为：6000.0，本次优惠：4000.0
+最终支付：6000.0
+false
+true
+true
+true
+# Running 64-bit HotSpot VM.
+*# Using compressed oop with 0-bit shift.
+,# Using compressed klass with 3-bit shift.
+ # Objects are 8 bytes aligned.
+:# Field sizes by type: 4, 1, 1, 2, 2, 4, 4, 8, 8 [bytes]
+:# Array element sizes: 4, 1, 1, 2, 2, 4, 4, 8, 8 [bytes]
+
+.com.zx.demo.obj.ObjectLock object internals:
+S OFFSET  SIZE                TYPE DESCRIPTION                               VALUE
+�      0     4                     (object header)                           05 00 00 00 (00000101 00000000 00000000 00000000) (5)
+�      4     4                     (object header)                           00 00 00 00 (00000000 00000000 00000000 00000000) (0)
+�      8     4                     (object header)                           a5 a2 02 20 (10100101 10100010 00000010 00100000) (537043621)
+R     12     4    java.lang.String TestCase.fName                            null
+O     16     4   java.lang.Integer ObjectLock.amount                         0
+l     20     4               int[] ObjectLock.arr                            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Instance size: 24 bytes
+CSpace losses: 0 bytes internal + 0 bytes external = 0 bytes total
+
+260840925
+.com.zx.demo.obj.ObjectLock object internals:
+S OFFSET  SIZE                TYPE DESCRIPTION                               VALUE
+�      0     4                     (object header)                           01 dd 1d 8c (00000001 11011101 00011101 10001100) (-1944199935)
+�      4     4                     (object header)                           0f 00 00 00 (00001111 00000000 00000000 00000000) (15)
+�      8     4                     (object header)                           a5 a2 02 20 (10100101 10100010 00000010 00100000) (537043621)
+R     12     4    java.lang.String TestCase.fName                            null
+O     16     4   java.lang.Integer ObjectLock.amount                         0
+l     20     4               int[] ObjectLock.arr                            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Instance size: 24 bytes
+CSpace losses: 0 bytes internal + 0 bytes external = 0 bytes total
+
+LITTLE_ENDIAN

@@ -1,9 +1,0 @@
-syntax = "proto2";
-package demo;
-
-option java_package = "com.zx.demo.msg";
-option java_outer_classname = "ICommondMsg";
-
-message ICmdMsg {
-
-}

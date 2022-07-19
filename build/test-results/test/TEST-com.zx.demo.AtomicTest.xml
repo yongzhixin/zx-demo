@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.zx.demo.AtomicTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-07-15T09:00:45" hostname="DESKTOP-SB05EAK" time="0.003">
+  <properties/>
+  <testcase name="test" classname="com.zx.demo.AtomicTest" time="0.003"/>
+  <testcase name="testCal" classname="com.zx.demo.AtomicTest" time="0.0"/>
+  <system-out><![CDATA[null
+1
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.zx.demo.demode.strategy.StrategyMain" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-07-15T09:00:45" hostname="DESKTOP-SB05EAK" time="0.006">
+  <properties/>
+  <testcase name="testStrategy" classname="com.zx.demo.demode.strategy.StrategyMain" time="0.006"/>
+  <testcase name="testString" classname="com.zx.demo.demode.strategy.StrategyMain" time="0.0"/>
+  <system-out><![CDATA[普通用户，折扣为：1.0
+原价为：5000.0，折后价为：5000.0，本次优惠：0.0
+最终支付：5000.0
+vip用户，折扣为：0.9
+原价为：10000.0，折后价为：9000.0，本次优惠：1000.0
+最终支付：9000.0
+super_vip用户，折扣为：0.8
+原价为：10000.0，折后价为：8000.0，本次优惠：2000.0
+最终支付：8000.0
+gold_vip用户，折扣为：0.6
+原价为：10000.0，折后价为：6000.0，本次优惠：4000.0
+最终支付：6000.0
+gold_vip用户，折扣为：0.6
+原价为：10000.0，折后价为：6000.0，本次优惠：4000.0
+最终支付：6000.0
+gold_vip用户，折扣为：0.6
+原价为：10000.0，折后价为：6000.0，本次优惠：4000.0
+最终支付：6000.0
+false
+true
+true
+true
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

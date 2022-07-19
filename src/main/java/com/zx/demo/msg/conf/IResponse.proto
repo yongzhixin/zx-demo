@@ -1,0 +1,13 @@
+syntax = "proto2";
+package demo;
+
+option java_package = "com.zx.demo.msg";
+option java_outer_classname = "IResponse";
+
+message IResponseMsg {
+
+  oneof dataBody{
+    GCPlayerLoginMsg login_msg = 2;
+    GCActivitiesMsg activities_msg = 3;
+  }
+}

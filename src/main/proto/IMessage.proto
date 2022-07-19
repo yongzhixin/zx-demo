@@ -1,0 +1,74 @@
+syntax = "proto3";
+package demo;
+
+option java_package = "com.zx.demo.msg";
+option java_outer_classname = "IMessages";
+
+message IMessage {
+
+	MsgType type = 1;
+
+	oneof dataBody{
+		IRequestMsg request = 2;
+		IResponseMsg response = 3;
+	}
+
+	enum MsgType {
+		CG_PLAYER_LOGIN = 0;
+		GC_PLAYER_LOGIN = 1;
+		CG_ACTIVITIES = 2;
+		GC_ACTIVITIES = 3;
+	}
+
+}
+
+message IRequestMsg {
+	oneof dataBody {
+		CGPlayerLoginMsg cg_login = 1;
+		CGActivitiesMsg cg_activities = 2;
+	}
+}
+
+message IResponseMsg {
+	oneof dataBody{
+		GCPlayerLoginMsg gc_login = 1;
+		GCActivitiesMsg gc_activities = 2;
+	}
+}
+
+message CGPlayerLoginMsg {
+	string rid = 1;
+}
+
+message GCPlayerLoginMsg {
+
+	int64 rid = 1;
+	string name = 2;
+	int32 level = 3;
+	int32 exp = 4;
+	repeated Hero heros = 5;
+
+	message Hero {
+		string id = 1;
+		string name = 2;
+		bool isFight = 3;
+		int32 skill = 4;
+		int32 level = 5;
+		HeroType type = 6;
+		optional string extra= 7;
+
+	}
+
+	enum HeroType {
+		COMMON = 0;
+		GOD = 1;
+	}
+}
+
+message CGActivitiesMsg {
+	string rid = 1;
+}
+
+message GCActivitiesMsg {
+	string rid = 1;
+}

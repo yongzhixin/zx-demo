@@ -1,0 +1,15 @@
+syntax = "proto2";
+package demo;
+
+option java_package = "com.zx.demo.msg";
+option java_outer_classname = "IRequest";
+
+import "CGPlayerLogin.proto";
+import "CGActivities.proto";
+
+message IRequestMsg {
+  oneof dataBody {
+      CGPlayerLoginMsg login_msg = 1;
+      CGActivitiesMsg activities_msg = 2;
+  }
+}

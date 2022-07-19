@@ -26,4 +26,10 @@ public class AtomicTest extends TestCase {
         System.out.println(b);
     }
 
+    public void testCal() {
+        long interval = 666;
+        int unit = 600;
+        System.out.println(interval / unit);
+    }
+
 }

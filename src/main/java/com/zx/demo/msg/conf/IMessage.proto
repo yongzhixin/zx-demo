@@ -1,0 +1,20 @@
+syntax = "proto2";
+package demo;
+
+option java_package = "com.zx.demo.msg";
+option java_outer_classname = "IMessages";
+
+import "MsgType.proto";
+import "CGPlayerLogin.Proto";
+import "GCPlayerLogin.Proto";
+
+message IMessage {
+
+	required MsgType type = 1;
+
+	oneof dataBody{
+		IRequestMsg request = 2;
+		IResponseMsg response = 3;
+	}
+
+}
