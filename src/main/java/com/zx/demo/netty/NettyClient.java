@@ -35,7 +35,7 @@ public class NettyClient {
 			}
 		}).option(ChannelOption.CONNECT_TIMEOUT_MILLIS, 100000).option(ChannelOption.SO_KEEPALIVE, true);
 		try {
-			ChannelFuture future = client.connect(new InetSocketAddress("127.0.0.1", 9999)).sync();
+			ChannelFuture future = client.connect(new InetSocketAddress("127.0.0.1", 8088)).sync();
 			System.out.println("已成功连接到服务器");
 			future.channel().closeFuture().sync();
 		} finally {

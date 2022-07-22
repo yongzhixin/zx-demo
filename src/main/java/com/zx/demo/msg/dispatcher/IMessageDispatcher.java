@@ -1,9 +1,9 @@
 package com.zx.demo.msg.dispatcher;
 
-import com.zx.demo.msg.IMessage.IMsg;
+import com.zx.demo.msg.IMessages;
 
 public interface IMessageDispatcher {
 
-	public void dispatch(IMsg msg);
+	public void dispatch(IMessages.IRequestMsg msg);
 
 }
