@@ -41,6 +41,8 @@ public class ServerHandler extends SimpleChannelInboundHandler<IMessages.IMessag
     protected void channelRead0(ChannelHandlerContext ctx, IMessages.IMessage msg) throws Exception {
         System.out.println("ServerHandler.channelRead0() " + Thread.currentThread());
         IMessages.IMessage.MsgType type = msg.getType();
+        // TODO 这块可以把消息丢到线程池中去处理，具体的逻辑线程与玩家唯一的rid有关
+        // TODO 执行完后在通过 ctx.writeAndFlush(respMsg); 将执行结果的响应丢回到channel对应的事件循环线程中，及对应的io线程
         System.out.println(type);
 //		ctx.channel().eventLoop().
         EventLoop eventLoop = ctx.channel().eventLoop();
@@ -48,6 +50,8 @@ public class ServerHandler extends SimpleChannelInboundHandler<IMessages.IMessag
         System.err.println((eventLoop.inEventLoop(Thread.currentThread())));
 
         System.err.println(ctx.channel().eventLoop().parent());
+        ctx.channel().writeAndFlush(type);
+        ctx.writeAndFlush(type);
         // this.dispatcher.dispatch(msg);
     }
 

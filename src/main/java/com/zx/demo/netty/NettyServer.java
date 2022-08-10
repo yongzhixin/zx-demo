@@ -4,10 +4,7 @@ import com.zx.demo.msg.IMessages;
 import com.zx.demo.msg.handle.ServerClientHandler;
 import com.zx.demo.netty.handler.ServerHandler;
 import io.netty.bootstrap.ServerBootstrap;
-import io.netty.channel.ChannelFuture;
-import io.netty.channel.ChannelInitializer;
-import io.netty.channel.ChannelOption;
-import io.netty.channel.EventLoopGroup;
+import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
@@ -15,6 +12,7 @@ import io.netty.handler.codec.protobuf.ProtobufDecoder;
 import io.netty.handler.codec.protobuf.ProtobufEncoder;
 import io.netty.handler.codec.protobuf.ProtobufVarint32FrameDecoder;
 import io.netty.handler.codec.protobuf.ProtobufVarint32LengthFieldPrepender;
+import io.netty.util.concurrent.DefaultThreadFactory;
 
 public class NettyServer {
 
@@ -25,8 +23,8 @@ public class NettyServer {
     }
 
     public void start() throws Exception {
-        EventLoopGroup boss = new NioEventLoopGroup();
-        EventLoopGroup workers = new NioEventLoopGroup(3);
+        EventLoopGroup boss = new NioEventLoopGroup(1, new DefaultThreadFactory("acceptor"));
+        EventLoopGroup workers = new NioEventLoopGroup(16, new DefaultThreadFactory("ioThread"));
 
         ServerBootstrap server = new ServerBootstrap();
         server.group(boss, workers).channel(NioServerSocketChannel.class)
