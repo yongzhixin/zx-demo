@@ -1,7 +1,5 @@
 package com.zx.demo;
 
-import junit.framework.TestCase;
-
 import java.util.concurrent.TimeUnit;
 
 public class StackNewObjectTest {

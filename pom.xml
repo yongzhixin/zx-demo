@@ -38,17 +38,6 @@
             <version>1.2.53</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.openjdk.jol</groupId>
-            <artifactId>jol-core</artifactId>
-            <version>0.11</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.itlgl</groupId>
-            <artifactId>byteutil</artifactId>
-            <version>0.1.2</version>
-        </dependency>
 
         <!-- 添加Spring支持 -->
         <!-- 核心包 -->
@@ -69,16 +58,32 @@
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
-            <version>3.6.0</version>
+            <version>3.21.5</version>
         </dependency>
 
 
+        <!-- https://mvnrepository.com/artifact/org.openjdk.jol/jol-core -->
+        <dependency>
+            <groupId>org.openjdk.jol</groupId>
+            <artifactId>jol-core</artifactId>
+            <version>0.16</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.itlgl</groupId>
+            <artifactId>byteutil</artifactId>
+            <version>0.1.2</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>3.8.1</version>
+            <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
+
 
         <!-- <dependency>
             <groupId>net.sf.json-lib</groupId>
