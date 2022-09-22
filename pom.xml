@@ -78,6 +78,21 @@
         </dependency>
 
 
+        <!-- https://mvnrepository.com/artifact/org.apache.dubbo/dubbo -->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.redisson/redisson -->
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
+            <version>3.6.5</version>
+        </dependency>
+
+
         <!-- https://mvnrepository.com/artifact/org.openjdk.jol/jol-core -->
         <dependency>
             <groupId>org.openjdk.jol</groupId>

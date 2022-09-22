@@ -12,3 +12,4 @@
 /target/maven-status/
 /target/surefire-reports/
 /target/test-classes/
+/.idea/*.xml
