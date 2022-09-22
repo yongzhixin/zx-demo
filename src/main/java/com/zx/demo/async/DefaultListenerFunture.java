@@ -1,4 +1,4 @@
-package com.zx.demo.aync;
+package com.zx.demo.async;
 
 import java.util.List;
 import java.util.concurrent.Callable;

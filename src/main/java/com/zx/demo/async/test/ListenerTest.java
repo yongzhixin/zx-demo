@@ -1,11 +1,8 @@
-package com.zx.demo.aync.test;
+package com.zx.demo.async.test;
 
-import com.zx.demo.aync.DefaultListenerFunture;
-import com.zx.demo.aync.Listener;
-import com.zx.demo.aync.ListenerFuture;
+import com.zx.demo.async.DefaultListenerFunture;
+import com.zx.demo.async.Listener;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 

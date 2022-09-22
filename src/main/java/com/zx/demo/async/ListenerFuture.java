@@ -1,4 +1,4 @@
-package com.zx.demo.aync;
+package com.zx.demo.async;
 
 import java.util.concurrent.Future;
 
